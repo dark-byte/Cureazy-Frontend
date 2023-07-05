@@ -1,38 +1,93 @@
-.App {
-  text-align: center;
+:root{
+  --primary: #37F841;
+  --secondary: #DDFB1F;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+/* Global */
+h1{
+  font-size: 58px;
+  margin-bottom: 15px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h3{
+  font-size: 28px;
+  font-weight: 300;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body{
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+}
+
+button{
+  background: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 18px;
+  border: 2px solid #ffffff00;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.btn-group{
+  display: flex;
+  margin-top: 40px;
+}
+
+.btn-primary{
+  background: var(--primary);
+  padding: 20px 40px;
+  color: #fff;
+  margin-right: 50px;
+}
+
+.btn-secondary{
+  display: inline-flex;
+  align-items: center;
+  padding: 20px 40px;
+}
+button:hover{
+  box-shadow: rgba(76, 76, 87, 0.2) 0px 7px 20px 0px;
+}
+
+.watch-icon{
+  color: var(--primary);
+  font-size: 28px;
+  margin-right: 5px;
+}
+
+
+.hero{
+  display: flex;
+  padding: 20px 70px;
+}
+
+.text{
+  flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  padding: 30px;
+  min-height: 100%;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.hero h1{
+  color: var(--primary)
+  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.hero-img{
+  flex:1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: relative;
 }
+
+.hero-img img{
+  height: 800px;
+  top: 0;
+}
+

@@ -22,13 +22,13 @@ ensuring minimal waiting times.
                     Book Appointment
                 </button>
                 <button className='btn-secondary'>
-                    <AiFillPlayCircle className='watch-icon'/>     Watch video
+                    <AiFillPlayCircle className='watch-icon'/> Watch video
                 </button>
             </div>
         </div>
 
         <div className="hero-img">
-            <img src={image} alt="" />
+            <img src={doctor} alt="" />
         </div>
     </section>
   );

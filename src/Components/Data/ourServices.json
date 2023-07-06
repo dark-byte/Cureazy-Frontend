@@ -1,0 +1,21 @@
+[{
+    "imageSrc" : "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+    "title" : "Online Appointment Booking",
+    "description" : "Enjoy the convience of scheduling your appointments from anywhere and enjoying prompt medical care."
+},
+{
+    "title" : "Report Showing",
+    "imageSrc" : "https://images.unsplash.com/photo-1576089172869-4f5f6f315620?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1852&q=80",
+    "description" : "Convinient time slots available exclusively for patients who only need to present their medical report to the doctor"
+},
+{
+    "imageSrc" : "https://images.unsplash.com/photo-1581056771107-24ca5f033842?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+    "title" : "Check Status",
+    "description" : "View estimated waiting time and patient count remotely, eliminate the need to physically visit the clinic."
+},
+{
+    "imageSrc" : "https://images.unsplash.com/photo-1599045118108-bf9954418b76?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80",
+    "title" : "Get Prescription",
+    "description" : "Access and manage your prescriptions anytime. Say goodbye to paper prescriptions with our online healthcare app."
+}
+]

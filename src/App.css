@@ -1,5 +1,6 @@
 :root{
-  --primary: #37F841;
+  --primary: #25a12c;
+  --primary-dark: #1f8024;
   --secondary: #DDFB1F;
 }
 
@@ -8,6 +9,7 @@
 h1{
   font-size: 58px;
   margin-bottom: 15px;
+  font-weight: 700;
 }
 
 h3{
@@ -18,22 +20,41 @@ h3{
 body{
   font-family: 'Lato', sans-serif;
   margin: 0;
+  background-color: #f1f1f1;
 }
 
 button{
   background: none;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
   font-weight: 700;
   font-size: 18px;
   border: 2px solid #ffffff00;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .btn-group{
   display: flex;
   margin-top: 40px;
+}
+
+.btn-nav-primary{
+  padding: 10px 20px;
+  background-color: var(--primary);
+  color: #fff;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.btn-nav-secondary{
+  padding: 10px 20px;
+  box-shadow: none;
+  margin-right: 10px;
+  color: var(--primary)
+}
+
+.btn-nav-primary:hover{
+  background-color: var(--primary-dark);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .btn-primary{
@@ -48,8 +69,13 @@ button{
   align-items: center;
   padding: 20px 40px;
 }
-button:hover{
+
+.btn-secondary:hover{
   box-shadow: rgba(76, 76, 87, 0.2) 0px 7px 20px 0px;
+}
+
+.btn-primary:hover{
+  background-color: var(--primary-dark);
 }
 
 .watch-icon{
@@ -87,7 +113,139 @@ button:hover{
 }
 
 .hero-img img{
-  height: 800px;
+  max-height: 800px;
   top: 0;
 }
 
+.text{
+  margin-left: 20px;
+}
+
+
+
+/* Navbar css */
+
+.navbar {
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 10px 40px;
+}
+
+.navbar-logo {
+font-size: 24px;
+margin-left: 40px;
+font-weight: bold;
+color: #333;
+}
+
+.navbar-links {
+display: flex;
+align-items: center;
+}
+
+.navbar-link {
+margin-left: 20px;
+font-size: 18px;
+color: #333;
+text-decoration: none;
+}
+
+.navbar-link-active{
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.navbar-button-group {
+display: flex;
+align-items: center;
+margin-left: 20px;
+
+}
+
+/* SERVICES */
+
+.services{
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-container{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+/* CARD */
+
+.card{
+  width: 400px;
+  cursor: pointer;
+  background-color: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  margin: 50px;
+  box-shadow: rgba(0, 0, 0, 0.091) 0px 10px 36px 0px, rgba(0, 0, 0, 0.028) 0px 0px 0px 1px;
+  border-bottom: 5px solid #ffffff00;
+}
+
+.card:hover{
+  border-bottom: 5px solid var(--primary-dark);
+
+  box-shadow: rgba(0, 0, 0, 0.164) 0px 10px 36px 0px, rgba(0, 0, 0, 0.09) 0px 0px 0px 1px;
+}
+
+.card-img-container{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.card-img{
+  width: 90%;
+  /* border-radius: 15px; */
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.card h3{
+  color: var(--primary);
+  margin-top:5px;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+
+@media (max-width: 768px) {
+
+  .hero-img{
+    display: none;
+  }
+
+.navbar {
+  flex-direction: column;
+  padding: 10px;
+}
+
+.navbar-logo {
+  margin-bottom: 10px;
+}
+
+.navbar-links {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.navbar-link,
+.navbar-button {
+  margin-top: 10px;
+  margin-left: 0;
+}
+}

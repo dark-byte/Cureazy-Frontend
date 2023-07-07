@@ -4,7 +4,7 @@ import services from './Data/ourServices.json'
 
 const Services = () => {
   return (
-    <section className='services'>
+    <section className='section-container'>
       <h1>OUR SERVICES</h1>
       <div>
         <div className="card-container">

@@ -1,0 +1,31 @@
+[{
+    "imageSrc" : "https://images.pexels.com/photos/5387162/pexels-photo-5387162.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "title" : "Accept Online Booking",
+    "description" : "Your own mobile-optimised booking website or integration with your existing site. Also, accept bookings directly via Facebook,Instagram, Google or your own branded client app."
+},
+{
+    "title" : "Notify via SMS/Email",
+    "imageSrc" : "https://images.pexels.com/photos/3183202/pexels-photo-3183202.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "description" : "Reminders to staff and clients whenever appointments are booked, cancelled or rescheduled. With push notifications on your mobile for new booking information via the admin ap."
+},
+{
+    "imageSrc" : "https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "title" : "Client and Admin App",
+    "description" : "Offer clients your own personalised client app to book your services and download the admin app to manage your business on the go."
+},
+{
+    "imageSrc" : "https://images.pexels.com/photos/6684769/pexels-photo-6684769.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "title" : "Accept Payments",
+    "description" : "Accept online payments & deposits through a range of payment processors like PayPal, Stripe and more or accept cash or card onsite via our POS system."
+},
+{
+    "imageSrc" : "https://images.pexels.com/photos/236380/pexels-photo-236380.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "title" : "Waiting List",
+    "description" : "Register for a waiting list spot on fully booked days. If someone cancels an appointment, applicants registered on this day will receive an email invitation to book the recently opened slot."
+},
+{
+    "imageSrc" : "https://images.pexels.com/photos/40568/medical-appointment-doctor-healthcare-40568.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "title" : "Custom Features",
+    "description" : "Features like; Coupons & gift cards, Tips, customisable emails, sale of products, Membership, classes, Waiting list, Loyalty System, HIPAA, SOAP, Intake forms, File Uploader, Packages, POS, Deposits and more."
+}
+]

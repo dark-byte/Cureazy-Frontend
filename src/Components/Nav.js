@@ -1,8 +1,24 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Nav = () => {
+
+  const [navbar, setNavbar] = useState(true)
+
+  const changeBackground = () => {
+    if (window.scrollY >= 66) {
+      setNavbar(true)
+    } else {
+      setNavbar(false)
+    }
+  }
+
+  useEffect(() => {
+    changeBackground()
+    window.addEventListener("scroll", changeBackground)
+  })
+
   return (
-     <nav className="navbar">
+     <nav className={navbar? "navbar navbar-scroll" : "navbar"}>
         <div className="navbar-logo">
           <h2>MEDEEZY</h2>
         </div>

@@ -5,7 +5,7 @@ const Nav = () => {
   const [navbar, setNavbar] = useState(true)
 
   const changeBackground = () => {
-    if (window.scrollY >= 66) {
+    if (window.scrollY >= 60) {
       setNavbar(true)
     } else {
       setNavbar(false)
@@ -24,7 +24,7 @@ const Nav = () => {
         </div>
         <div className="navbar-links">
             <a className="navbar-link navbar-link-active" href="#">Home</a>
-            <a className="navbar-link" href='#'>Book Appointment</a>
+            <a className="navbar-link" href='#find-doc'>Get a doctor</a>
             <div className="navbar-button-group">
               <button className="btn-nav-secondary">Login</button>
               <button className="btn-nav-primary">Sign up</button>

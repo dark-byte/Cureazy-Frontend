@@ -17,7 +17,7 @@ const FindDoc = () => {
             <p>Discover the best doctors in your locality</p>
             <form className='find-doc-form' onSubmit={handleSearch}>
                 <AiOutlineSearch className='search-icon'/>
-                <input type="text" placeholder="Search a doctor or clinic" />
+                <input className='landing-input' type="text" placeholder="Search a doctor or clinic" />
                 <button className='btn-primary' type="submit">Search</button>
             </form>
         </div>

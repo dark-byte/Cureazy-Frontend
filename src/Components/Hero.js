@@ -1,7 +1,5 @@
 import React from 'react';
-import blob from '../images/blob.svg'
 import doctor from '../images/landing-pic1.png'
-import image from '../images/landing-pic.png'
 import {AiFillPlayCircle} from 'react-icons/ai'
 
 

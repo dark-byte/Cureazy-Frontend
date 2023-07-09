@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const Nav = () => {
 
@@ -26,8 +27,12 @@ const Nav = () => {
             <a className="navbar-link navbar-link-active" href="#">Home</a>
             <a className="navbar-link" href='#find-doc'>Get a doctor</a>
             <div className="navbar-button-group">
-              <button className="btn-nav-secondary">Login</button>
-              <button className="btn-nav-primary">Sign up</button>
+              <button className="btn-nav-secondary">
+                <Link className='link' to="/login">Login</Link>
+              </button>
+              <button className="btn-nav-primary">
+                <Link className='link link-white' to="/signup">Sign Up</Link>
+              </button>
             </div>
         </div>
         </nav>

@@ -11,7 +11,7 @@
 /* Global */
 h1{
   font-family: 'Montserrat', sans-serif;
-  font-size: 58px;
+  font-size: 42px;
   margin-bottom: 15px;
   font-weight: 800;
 }
@@ -22,7 +22,7 @@ h2{
 }
 
 h3{
-  font-size: 28px;
+  font-size: 22px;
   font-weight: 300;
 }
 
@@ -48,19 +48,19 @@ button{
   border-radius: 8px;
   cursor: pointer;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 16px;
   border: 2px solid #ffffff00;
 }
 
 .btn-group{
   display: flex;
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
 .landing-input {
   padding: 20px 40px;
   border: none;
-  font-size: 18px;
+  font-size: 16px;
   min-width: 400px;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
@@ -95,7 +95,7 @@ button{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 400px;
+  height: 300px;
 }
 
 .find-doc-bg{
@@ -135,7 +135,7 @@ button{
 .search-icon{
   position: absolute;
   left: 20px;
-  font-size: 28px;
+  font-size: 26px;
   color:#939292;
 }
 
@@ -173,7 +173,7 @@ button{
 
 .btn-primary{
   background: var(--primary);
-  padding: 20px 40px;
+  padding: 18px 40px;
   color: #fff;
   margin-right: 50px;
 }
@@ -227,7 +227,7 @@ button{
 }
 
 .hero-img img{
-  max-height: 800px;
+  max-height: 600px;
   top: 0;
 }
 
@@ -242,7 +242,7 @@ button{
   z-index: 100;  
   position: sticky;
   top: 0;
-  max-height: 70px;
+  max-height: 60px;
   background-color: var(--bg);
   display: flex;
   align-items: center;
@@ -310,7 +310,7 @@ margin-left: 20px;
 /* CARD */
 
 .card{
-  width: 400px;
+  width: 350px;
   cursor: pointer;
   background-color: #fff;
   border-radius: 15px;
@@ -321,7 +321,7 @@ margin-left: 20px;
 }
 
 .features .card{
-  margin: 50px;
+  margin: 40px;
 }
 
 .card:hover{
@@ -341,7 +341,7 @@ margin-left: 20px;
   /* border-radius: 15px; */
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
-  height: 300px;
+  height: 220px;
   object-fit: cover;
 }
 
@@ -359,16 +359,17 @@ margin-left: 20px;
 }
 
 .download-app h1{
-  font-size: 52px;
+  font-size: 42px;
 }
 
 .download-app-img{
-  height: 600px;
+  max-height: 600px;
+  width: 100%;
+  /* max-width: 500px; */
 }
 
 .left{
   flex:1;
-  margin-right: -150px;
   display:flex;
   flex-direction: column;
   align-items: center;
@@ -379,14 +380,16 @@ margin-left: 20px;
 }
 
 .right{
-  flex: 0.6;
+  flex: 1;
+  max-width: 50%;
+  margin: 0;
   display: flex;
   justify-content: center;
 }
 
 .left h3{
   margin-top: 15px;
-  font-size: 30px;
+  font-size: 26px;
 }
 
 .email-input{
@@ -419,7 +422,7 @@ margin-left: 20px;
 /* FOOTER */
 footer {
   display: flex;
-  min-height: 300px;
+  min-height: 250px;
   justify-content: space-between;
   background-color: var(--primary-dark);
   padding: 20px;
@@ -442,11 +445,11 @@ footer {
 }
 
 .footer-column h1{
-  font-size: 40px;
+  font-size: 36px;
 }
 
 .footer-column h3 {
-  font-size: 26px;
+  font-size: 20px;
   font-weight: 700;
   margin-bottom: 30px;
 }
@@ -463,7 +466,7 @@ footer {
 
 .footer-column a {
   color: var(--bg);
-  font-size: 18px;
+  font-size: 14px;
 }
 
 .footer-column a:hover {
@@ -487,7 +490,7 @@ footer {
 .register-bg{
   background-color: var(--bg-dark);
   display: flex;
-  height: 80%;
+  height: 90%;
   border-radius: 20px;
   justify-content: center;
   box-shadow: rgba(100, 100, 111, 0.293) 0px 30px 50px 20px;
@@ -508,21 +511,22 @@ footer {
 }
 
 .register-container img{
-  max-height: 700px;
+  height: 85%;
   margin-right: 70px;
-  margin-left: 40px;
+  margin-left: 15%;
 }
 
 .register-container h2{
-  font-size: 42px;
+  font-size: 32px;
   font-weight: 800;
-  margin-bottom: 60px;
+  margin-bottom: 1em;
   margin-top: 0;
   color: var(--primary);
 }
 
 .register-form-btn{
   border: 2px solid #bdbdbd;
+  font-size: 16px;
   width: 98%;
   font-weight: 400;
   font-family: 'lato', 'sans-serif';
@@ -536,7 +540,7 @@ footer {
 }
 
 .register-form{
-  margin: 0 80px;
+  margin: 0 10%;
   margin-left: 0;
 }
 
@@ -579,12 +583,12 @@ footer {
 
 
 .register-form input{
-  font-size: 18px;
+  font-size: 12px;
   margin-bottom: 15px;
-  padding: 15px 30px;
+  padding: 15px 20px;
   border-radius: 10px;
   border: 2px solid #bdbdbd;
-  min-width: 400px;
+  min-width: 300px;
 }
 
 .register-form input[type="checkbox"]{

@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios'
-// import signupImg from '../images/loginpageimg.png'
 import {FcGoogle} from 'react-icons/fc'
 import { Link } from 'react-router-dom';
+
+var validator = require("email-validator");
+const bcrypt = require('bcryptjs');
 
 const SignUp = () => {
     const [name, setName] = useState('');
@@ -11,39 +13,64 @@ const SignUp = () => {
     const [confirmPassword, setConfirmPassword] = useState('');
     const [agreedToTerms, setAgreedToTerms] = useState(false);
 
-    useEffect(()=>{
-        // handleSignUp()
-    }, [])
+    const handleSignUp = async (e) => {
+        e.preventDefault()
 
-    const handleSignUp = () => {
+        var ph = null
+        var mail = email
+        //Email or Phone Validation
+        if(!email){
+            alert("Email or Phone number required!")
+            return
+        }
+        if(!validator.validate(email) && isNaN(email)){
+            alert("Invalid Email")
+            return
+        }
+        if(!isNaN(email) && email.length !== 10){
+            alert("Invalid number")
+            return
+        }
         if(password !== confirmPassword){
             alert("Passwords do not match!")
             return
         }
-        axios({
-        method: 'post',
-        url: "http://localhost:5000/signup",
-        headers: {}, 
-        data: {
-            "fName" : name.split(" ")[0],
-            "lName": name.split(" ")[1],
-            "dob" : "2003-02-24",
-            "address": "dummy address",
-            "pin": "999999",
-            "email": email,
-            "phNumber": "912387400",
-            "password": password
+        if(!isNaN(email) && email.length === 10){
+            ph = +email
+            mail = null
         }
-        }).then((res)=>{
-            console.log(res)
-        }).catch((err)=>{
-            console.log(err)
-            alert("Some Error Occured!")
+
+        //Password Hashing
+        await bcrypt.hash(password, 10)
+        .then((hashedPassword)=>{
+            const pass = hashedPassword
+
+            axios({
+                method: 'post',
+                url: "http://localhost:5000/signup",
+                headers: {}, 
+                data: {
+                    "fName" : name.split(" ")[0],
+                    "lName": name.split(" ")[1],
+                    "dob" : "",
+                    "address": "",
+                    "pin": "",
+                    "email": mail,
+                    "phNumber": ph,
+                    "password": pass
+                }
+            }).then((res)=>{
+                    console.log(res)
+                    alert("Sign up Successful!")
+                }).catch((err)=>{
+                    console.log(err)
+                    alert("Some Error Occured!")
+                })
         })
     }
     
     const signupImg = 'https://images.unsplash.com/photo-1550831107-1553da8c8464?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80'
-
+    
     return (
         <div className="register-container">
             <div className="register-bg">
@@ -67,7 +94,7 @@ const SignUp = () => {
                         />
                         <input
                             type="email"
-                            placeholder="Email"
+                            placeholder="Email or Phone Number"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                         />

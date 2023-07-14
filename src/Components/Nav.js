@@ -24,7 +24,8 @@ const Nav = () => {
           <h2>MEDEEZY</h2>
         </div>
         <div className="navbar-links">
-            <a className="navbar-link navbar-link-active" href="#">Home</a>
+            {/* <a className="navbar-link navbar-link-active" href="#">Home</a> */}
+            <Link className='navbar-link navbar-link-active' to="/">Home</Link>
             <a className="navbar-link" href='#find-doc'>Get a doctor</a>
             <div className="navbar-button-group">
               <button className="btn-nav-secondary">

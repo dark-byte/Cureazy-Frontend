@@ -491,23 +491,23 @@ footer {
   background-color: var(--bg-dark);
   display: flex;
   height: 90%;
+  /* width: 90% ; */
   border-radius: 20px;
   justify-content: center;
   box-shadow: rgba(100, 100, 111, 0.293) 0px 30px 50px 20px;
 }
 
-.register-container .register-left{
+.register-left, .register-right{
   height: 100%;
   display: flex;
-  flex: 1;
+  /* flex: 1; */
+  /* width: 50%; */
   align-items: center;
   justify-content: center;
 }
 
-.register-container .register-right{
-  flex: 1;
-  display: flex;
-  align-items: center;
+.register-right{
+  padding: 0 20px;
 }
 
 .register-container img{

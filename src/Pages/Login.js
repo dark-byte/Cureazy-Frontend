@@ -2,6 +2,7 @@ import React from 'react';
 import { FcGoogle } from 'react-icons/fc';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import axios from 'axios'
 
 const Login = () => {
 
@@ -9,7 +10,21 @@ const Login = () => {
   const [password, setPassword] = useState('');
 
   const handleLogin = ()=>{
-
+        axios({
+        method: 'post',
+        url: "http://localhost:5000/login",
+        headers: {}, 
+        data: {
+            "email": email,
+            "password": password
+        }
+        }).then((res)=>{
+            console.log(res)
+            alert("login successful!")
+        }).catch((err)=>{
+            console.error(err)
+            alert("Some Error Occured!")
+        })
   }
 
   const loginImg = 'https://images.unsplash.com/photo-1550831106-0994fe8abcfe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80'

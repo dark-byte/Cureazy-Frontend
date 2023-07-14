@@ -3,6 +3,8 @@ import { FcGoogle } from 'react-icons/fc';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import axios from 'axios'
+const cors = require('cors')
+app.use(cors())
 
 const Login = () => {
 

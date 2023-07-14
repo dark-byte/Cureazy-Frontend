@@ -3,6 +3,8 @@ import axios from 'axios'
 // import signupImg from '../images/loginpageimg.png'
 import {FcGoogle} from 'react-icons/fc'
 import { Link } from 'react-router-dom';
+const cors = require('cors')
+app.use(cors())
 
 const SignUp = () => {
     const [name, setName] = useState('');

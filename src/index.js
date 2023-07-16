@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './Pages/App';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Login from './Pages/Login';
 import SignUp from './Pages/SignUp';
+import Home from './Pages/Home'
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -13,6 +14,7 @@ root.render(
         <Route path = "/" element = {<App/>}/>
         <Route path='/login' element = {<Login/>}/>
         <Route path='/signup' element = {<SignUp/>}/>
+        <Route path='/home' element = {<Home/>}/>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

@@ -1,31 +1,17 @@
-import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { AiOutlineSearch } from 'react-icons/ai'
 
 const Nav = () => {
-
-  const [navbar, setNavbar] = useState(true)
-
-  const changeBackground = () => {
-    if (window.scrollY >= 60) {
-      setNavbar(true)
-    } else {
-      setNavbar(false)
-    }
-  }
-
-  useEffect(() => {
-    changeBackground()
-    window.addEventListener("scroll", changeBackground)
-  })
-
   return (
-     <nav className={navbar? "navbar navbar-scroll" : "navbar"}>
+     <nav className="navbar navbar-fixed">
         <div className="navbar-logo">
           <Link className='logo' to="/home"><h2>CUREAZZY</h2></Link>
         </div>
+        <div className="navbar-input">
+          <AiOutlineSearch className='search-icon' style={{left: "15px"}}/>
+          <input className='input' placeholder='Search for doctors, clinics or hospitals'/>
+        </div>
         <div className="navbar-links">
-            <Link className='navbar-link navbar-link-active' to="/">Home</Link>
-            <a className="navbar-link" href='#find-doc'>Get a doctor</a>
             <div className="navbar-button-group">
               <button className="btn-nav-secondary">
                 <Link className='link' to="/login">Login</Link>
@@ -35,7 +21,7 @@ const Nav = () => {
               </button>
             </div>
         </div>
-        </nav>
+    </nav>
   );
 }
 

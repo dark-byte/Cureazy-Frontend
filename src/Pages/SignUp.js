@@ -16,7 +16,7 @@ const SignUp = () => {
     const handleSignUp = async (e) => {
         e.preventDefault()
 
-        var ph = null
+        var ph = ""
         var mail = email
         //Email or Phone Validation
         if(!email){
@@ -37,7 +37,7 @@ const SignUp = () => {
         }
         if(!isNaN(email) && email.length === 10){
             ph = +email
-            mail = null
+            mail = ""
         }
 
         //Password Hashing
@@ -64,7 +64,7 @@ const SignUp = () => {
                     alert("Sign up Successful!")
                 }).catch((err)=>{
                     console.log(err)
-                    alert("Some Error Occured!")
+                    alert(err.response.data.error)
                 })
         })
     }

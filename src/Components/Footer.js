@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer>
       <div className="footer-column footer-column-logo">
-        <h1>MEDEEZY</h1>
+        <h1>CUREAZZY</h1>
         <p>2023 © Medic ™ Ltd. All rights reserved.</p>
       </div>
       <div className="footer-column">

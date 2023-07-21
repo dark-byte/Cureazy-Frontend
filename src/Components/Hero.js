@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import doctor from '../images/landing-pic1.png'
 import {AiFillPlayCircle} from 'react-icons/ai'
 
@@ -16,9 +17,11 @@ ensuring minimal waiting times.
             </h3>
 
             <div className="btn-group">
-                <button className='btn-primary'>
-                    Book Appointment
-                </button>
+                    <Link to="/home">
+                        <button className='btn-primary'>
+                            Book Appointment
+                        </button>
+                    </Link>
                 <button className='btn-secondary'>
                     <AiFillPlayCircle className='watch-icon'/> Watch video
                 </button>

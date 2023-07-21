@@ -1,5 +1,6 @@
 import React from 'react';
 import {AiOutlineSearch} from 'react-icons/ai'
+import { Link } from 'react-router-dom';
 
 const FindDoc = () => {
 
@@ -18,7 +19,9 @@ const FindDoc = () => {
             <form className='find-doc-form' onSubmit={handleSearch}>
                 <AiOutlineSearch className='search-icon'/>
                 <input className='landing-input' type="text" placeholder="Search a doctor or clinic" />
-                <button className='btn-primary' type="submit">Search</button>
+                <Link to='/home'>
+                  <button className='btn-primary' type="submit">Search</button>
+                </Link>
             </form>
         </div>
     </section>

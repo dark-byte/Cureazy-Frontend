@@ -5,6 +5,7 @@ import Login from './Pages/Login';
 import SignUp from './Pages/SignUp';
 import Home from './Pages/Home'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import ClinicPage from './Pages/ClinicPage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -15,7 +16,7 @@ root.render(
         <Route path='/login' element = {<Login/>}/>
         <Route path='/signup' element = {<SignUp/>}/>
         <Route path='/home' element = {<Home/>}/>
-        <Route path={`/clinics/${id}`} element = {<ClinicPage id = {id}/>}/>
+        <Route path='/clinic/:id' element = {<ClinicPage/>}/>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

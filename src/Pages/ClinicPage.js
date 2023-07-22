@@ -4,6 +4,7 @@ import GridGallery from '../Components/GridGallery';
 import images from '../Components/Data/images';
 import ClinicTitle from '../Components/ClinicTitle';
 import clinicInfo from '../Components/Data/clinicInfo';
+import Specialists from '../Components/Specialists';
 
 const ClinicPage = () => {
   const {id } = useParams()
@@ -16,15 +17,18 @@ const ClinicPage = () => {
   // }
 
   return (  
-    <div className='clinic-page'>
-      <NavFixed/>
-        <p>
-      <Link className='aTag' to="/home">
-        Bhuvaneswar 
-      </Link> / { id}
-        </p>
-      <GridGallery images = {images}/>
-      <ClinicTitle {...clinicInfo}/>  
+    <div>
+        <NavFixed/>
+      <div className='clinic-page'>
+          <p>
+            <Link className='aTag' to="/home">
+              Bhuvaneswar 
+            </Link> / { id}
+          </p>
+        <GridGallery images = {images}/>
+        <ClinicTitle {...clinicInfo}/>
+        <Specialists/>
+      </div>
     </div>
   );
 }

@@ -3,6 +3,7 @@ import NavFixed from '../Components/NavFixed'
 import Clinics from '../Components/Clinics';
 import Categories from '../Components/Categories';
 import TopCarousel from '../Components/TopCarousel';
+import Footer from '../Components/Footer'
 
 const Home = () => {
 
@@ -12,6 +13,7 @@ const Home = () => {
       <TopCarousel/>
       <Categories/>
       <Clinics/>
+      <Footer/>
     </div>
   );
 }

@@ -17,7 +17,7 @@ const Nav = () => {
                 <Link className='link' to="/login">Login</Link>
               </button>
               <button className="btn-nav-primary">
-                <Link className='link link-white' to="/signup">Sign Up</Link>
+                <Link className='link-white' to="/signup">Sign Up</Link>
               </button>
             </div>
         </div>

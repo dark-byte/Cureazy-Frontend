@@ -27,7 +27,7 @@ const GridGallery = ({images}) => {
       </div>
       <div className={images[4] ? "last-clinic-image" : ""} onClick={handleViewMore}>
         {images[4]? 
-        <div>
+        <div style={{height: "100%", width: "100%", position:"relative", display: "flex", justifyContent:"center", alignItems: "center"}}>
           <span className='clinic-img-view-more'>View More</span>
           <img className="clinic-image" src={images[4]} alt="" />
         </div> 

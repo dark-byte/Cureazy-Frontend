@@ -5,6 +5,7 @@ import images from '../Components/Data/images';
 import ClinicTitle from '../Components/ClinicTitle';
 import clinicInfo from '../Components/Data/clinicInfo';
 import Specialists from '../Components/Specialists';
+import Footer from '../Components/Footer';
 
 const ClinicPage = () => {
   const {id } = useParams()
@@ -29,6 +30,7 @@ const ClinicPage = () => {
         <ClinicTitle {...clinicInfo}/>
         <Specialists/>
       </div>
+        <Footer/>
     </div>
   );
 }

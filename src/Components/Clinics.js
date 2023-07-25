@@ -10,13 +10,7 @@ const Clinics = () => {
       <div className="card-container clinic-card-container">
           {clinics.map((clinic)=>{
               return <ClinicCard 
-              img={clinic.img}
-              name = {clinic.name}
-              category= {clinic.category}
-              location= {clinic.location}
-              distance= {clinic.distance}
-              fees= {clinic.fees}
-              rating= {clinic.rating}
+              {...clinic}
               /> 
           })}
       </div>

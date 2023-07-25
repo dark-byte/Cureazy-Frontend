@@ -361,6 +361,7 @@ margin-left: 20px;
 
 .section-container{
   margin-top: 50px;
+  margin-bottom: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -641,7 +642,7 @@ footer {
   width: 100%;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
+  margin: 20px 0;
 }
 
 .register-form hr {
@@ -845,7 +846,7 @@ footer {
 /* CLINIC PAGE */
 
 .clinic-page{
-  padding: 0 120px;
+  padding: 0 120px 50px;
 }
 
 .clinic-title{
@@ -877,7 +878,7 @@ footer {
 }
 
 .rating{
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   color: var(--primary);
   font-size: 18px;
   font-weight: 800;
@@ -973,7 +974,7 @@ footer {
 .doctor-book-btn-group{
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   padding-bottom: 20px;
 }

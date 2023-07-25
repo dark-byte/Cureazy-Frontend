@@ -6,11 +6,13 @@ import SignUp from './Pages/SignUp';
 import Home from './Pages/Home'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import ClinicPage from './Pages/ClinicPage';
+import ScrollTop from './Components/ScrollTop';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
+      <ScrollTop/>
       <Routes>
         <Route path = "/" element = {<App/>}/>
         <Route path='/login' element = {<Login/>}/>

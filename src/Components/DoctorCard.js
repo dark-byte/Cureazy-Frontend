@@ -11,8 +11,8 @@ const DoctorCard = ({img, name, specaility, days, isAvailable, fees}) => {
                 <h4>{name}</h4>
                 <span className='doc-card-span primary'>{specaility}</span><br></br>
                 <span className='doc-card-span'>{days}</span><br></br>
-                <span className='doc-card-span'>{isAvailable? "Available" : "Not Available"}</span><br></br>
-                <span className='doc-card-span'>Fees - <b>{fees}/-  </b></span>
+                <span className='doc-card-span'>Fees - <b>{fees}/-  </b></span><br></br>
+                <span><a className='doc-card-span primary' href="#">View Profile</a></span>
 
             </div>
         </div>

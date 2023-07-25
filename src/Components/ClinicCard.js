@@ -1,7 +1,9 @@
 import React from 'react';
 import {AiFillLike} from 'react-icons/ai'
+import { Link } from 'react-router-dom'
 
-const ClinicCard = ({img, name, category, location, distance, fees, rating}) => {
+const ClinicCard = ({img, name, id, category, location, distance, fees, rating}) => {
+
   return (
     <div className='clinic-card'>
         <div className="clinic-card-img-container">
@@ -17,7 +19,11 @@ const ClinicCard = ({img, name, category, location, distance, fees, rating}) => 
             <p>Consultancy fees starts at <b>{fees}/-</b></p>
         </div>
         <div style={{display : "flex", justifyContent: "center", alignItems: "center"}}>
-            <button className='btn-primary btn-small'>View</button>
+              <Link className='link-white' to={`/clinic/${id}`}>
+                <button className='btn-primary btn-small'>
+                  View
+                </button>
+              </Link>
         </div>
     </div>
   );

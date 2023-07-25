@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios'
-import {FcGoogle} from 'react-icons/fc'
 import { Link } from 'react-router-dom';
+import jwt_decode from 'jwt-decode';
 
 var validator = require("email-validator");
 const bcrypt = require('bcryptjs');
@@ -12,6 +12,34 @@ const SignUp = () => {
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const [agreedToTerms, setAgreedToTerms] = useState(false);
+
+    useEffect(()=>{
+        
+        window.google.accounts.id.initialize({
+            client_id : "957413395116-9415jluo91928e8kfvrjthvsnvhp6ib7.apps.googleusercontent.com",
+            callback: handleGoogleSignUp
+        })
+
+        window.google.accounts.id.renderButton(
+            document.getElementById('signup'),
+            {
+                theme: "outline",
+                width: "344px"
+            }
+        )
+
+        window.google.accounts.id.prompt()
+
+    }, [])
+
+    const handleGoogleSignUp = async (res) =>{
+        console.log(res.credential)
+        var user = jwt_decode(res.credential)
+        console.log(user.name)
+        console.log(user.email)
+
+        alert(`Welcome ${user.name}!`)
+    }
 
     const handleSignUp = async (e) => {
         e.preventDefault()
@@ -40,7 +68,7 @@ const SignUp = () => {
             mail = ""
         }
 
-        //Password Hashing
+        // Password Hashing
         await bcrypt.hash(password, 10)
         .then((hashedPassword)=>{
             const pass = hashedPassword
@@ -80,7 +108,8 @@ const SignUp = () => {
                 <div className="register-right">
                     <div className='section-container register-form'>
                         <h2> Create Your Account</h2>
-                        <button className='register-form-btn'><FcGoogle/> Sign up with Google</button>
+                        <div id="signup"></div>
+                        {/* <button id='signup' className='register-form-btn'><FcGoogle/> Sign up with Google</button> */}
                         <div className="divider">
                             <hr/>
                                 <span>or</span>

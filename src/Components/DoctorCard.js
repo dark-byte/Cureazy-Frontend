@@ -1,6 +1,6 @@
 import React from 'react';
 
-const DoctorCard = ({img, name, specaility, days, isAvailable, fees}) => {
+const DoctorCard = ({img, name, specaility, days, fees}) => {
   return (
     <div className='doctor-card'>
         <div style={{display:"flex"}}>
@@ -12,7 +12,7 @@ const DoctorCard = ({img, name, specaility, days, isAvailable, fees}) => {
                 <span className='doc-card-span primary'>{specaility}</span><br></br>
                 <span className='doc-card-span'>{days}</span><br></br>
                 <span className='doc-card-span'>Fees - <b>{fees}/-  </b></span><br></br>
-                <span><a className='doc-card-span primary' href="#">View Profile</a></span>
+                <span><a className='doc-card-span primary' href="/home">View Profile</a></span>
 
             </div>
         </div>

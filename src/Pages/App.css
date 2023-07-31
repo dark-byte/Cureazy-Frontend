@@ -84,6 +84,11 @@ padding-left: 45px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
+.fixed-top{
+  position: fixed;
+  top: 0px;
+}
+
 .min-shadow{
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
@@ -851,7 +856,11 @@ footer {
 
 .clinic-title{
   display: flex;
+  position: sticky;
+  top:0px;
+  background-color: var(--bg);
   justify-content: space-between;
+  z-index: 3;
   border-bottom: 2px solid var(--border);
   padding-bottom: 20px;
 }
@@ -889,10 +898,14 @@ footer {
 .sp-tabs{
   flex-grow: 1;
   border-right: 2px solid var(--border);
+  position: sticky;
+  top: 0px;
 }
 
 .specialists {
   display: flex;
+  position: sticky;
+  top: 200px;
 }
 
 .specialists h3{
@@ -986,6 +999,7 @@ footer {
 .doctor-book-btn-group .link{
   margin-bottom: 15px;
 }
+
 
 @media (max-width: 768px) {
 

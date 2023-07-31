@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import clinicInfo from '../Components/Data/clinicInfo'
 import {AiOutlineSearch} from 'react-icons/ai'
 import DoctorCard from './DoctorCard';
@@ -8,9 +8,6 @@ const Specialists = () => {
   const img = "https://images.pexels.com/photos/5215024/pexels-photo-5215024.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
   const [activeSpTab, setActiveSpTab] = useState(0)
 
-  // const handleSpTabClick = ()=>{
-
-  // }
 
   return (
     <div className='specialists'>
@@ -50,6 +47,46 @@ const Specialists = () => {
           fees="700"
           />
 
+
+          <DoctorCard img={img}
+          name = {`Dr. Rajendra Verma`}
+          specaility= {clinicInfo.specialists[activeSpTab]}
+          days="M W Th"
+          isAvailable={true}
+          fees="700"
+          />
+
+          <DoctorCard img={img}
+          name = {`Dr. Rajendra Verma`}
+          specaility= {clinicInfo.specialists[activeSpTab]}
+          days="M W Th"
+          isAvailable={true}
+          fees="700"
+          />
+
+          <DoctorCard img={img}
+          name = {`Dr. Rajendra Verma`}
+          specaility= {clinicInfo.specialists[activeSpTab]}
+          days="M W Th"
+          isAvailable={true}
+          fees="700"
+          />
+
+          <DoctorCard img={img}
+          name = {`Dr. Rajendra Verma`}
+          specaility= {clinicInfo.specialists[activeSpTab]}
+          days="M W Th"
+          isAvailable={true}
+          fees="700"
+          />
+
+          <DoctorCard img={img}
+          name = {`Dr. Rajendra Verma`}
+          specaility= {clinicInfo.specialists[activeSpTab]}
+          days="M W Th"
+          isAvailable={true}
+          fees="700"
+          />
 
           <DoctorCard img={img}
           name = {`Dr. Rajendra Verma`}

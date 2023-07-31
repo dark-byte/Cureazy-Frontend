@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { AiOutlineSearch } from 'react-icons/ai'
 
-const Nav = () => {
+const Nav = (loggedIn) => {
   return (
      <nav className="navbar navbar-fixed">
         <div className="navbar-logo">

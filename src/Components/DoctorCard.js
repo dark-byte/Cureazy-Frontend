@@ -12,7 +12,7 @@ const DoctorCard = ({img, name, specaility, days, fees}) => {
                 <span className='doc-card-span primary'>{specaility}</span><br></br>
                 <span className='doc-card-span'>{days}</span><br></br>
                 <span className='doc-card-span'>Fees - <b>{fees}/-  </b></span><br></br>
-                <span><a className='doc-card-span primary' href="/home">View Profile</a></span>
+                <span><a className='doc-card-span primary' href="/npmhome">View Profile</a></span>
 
             </div>
         </div>

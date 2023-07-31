@@ -1,34 +1,70 @@
 import React from 'react';
-import { FcGoogle } from 'react-icons/fc';
-import { Link } from 'react-router-dom';
-import { useState } from 'react';
+// import { FcGoogle } from 'react-icons/fc';
+import { Link, useNavigate } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import axios from 'axios'
-const Login = () => {
+import jwt_decode from 'jwt-decode';
+const dotenv = require("dotenv").config();
 
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
 
-  const handleLogin = ()=>{
-        axios({
-        method: 'post',
-        url: "http://localhost:5000/login",
-        headers: {}, 
-        data: {
-            "email": email,
-            "password": password
+const Login = (loggedIn) => {
+    const navigate = useNavigate()
+    useEffect(()=>{
+    
+    console.log(process.env.CLIENT_ID)
+    window.google.accounts.id.initialize({
+        client_id : "957413395116-9415jluo91928e8kfvrjthvsnvhp6ib7.apps.googleusercontent.com", 
+        callback: handleGoogleSignUp
+    })
+
+    window.google.accounts.id.renderButton(
+        document.getElementById('signup'),
+        {
+            theme: "outline",
+            width: "344px"
         }
-        }).then((res)=>{
-            console.log(res)
-            alert("login successful!")
-        }).catch((err)=>{
-            console.error(err)
-            alert("Some Error Occured!")
-        })
-  }
+    )
 
-  const loginImg = 'https://images.unsplash.com/photo-1550831106-0994fe8abcfe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80'
+    window.google.accounts.id.prompt()
 
-  return (    
+    }, [])
+
+    const handleGoogleSignUp = async (res) =>{
+        console.log(res.credential)
+        var user = jwt_decode(res.credential)
+        console.log(user.name)
+        console.log(user.email)
+
+        alert(`Welcome ${user.name}!`)
+        loggedIn = true
+        navigate('/home')
+    }
+
+
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    const handleLogin = ()=>{
+            axios({
+            method: 'post',
+            url: "http://localhost:5000/login",
+            headers: {}, 
+            data: {
+                "email": email,
+                "password": password
+            }
+            }).then((res)=>{
+                console.log(res)
+                alert("login successful!")
+            }).catch((err)=>{
+                console.error(err)
+                alert("Some Error Occured!")
+            })
+    }
+
+    const loginImg = 'https://images.unsplash.com/photo-1550831106-0994fe8abcfe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80'
+
+    return (    
     <div className="register-container">
         <div className="register-bg">
             <div className="register-left">
@@ -37,7 +73,8 @@ const Login = () => {
             <div className="register-right">
                 <div className='section-container register-form'>
                     <h2>Welcome Back</h2>
-                    <button className='register-form-btn'><FcGoogle/> Log In with Google</button>
+                    {/* <button className='register-form-btn'><FcGoogle/> Log In with Google</button> */}
+                    <div id="signup"></div>
                     <div className="divider">
                         <hr/>
                             <span>or</span>

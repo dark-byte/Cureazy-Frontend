@@ -26,11 +26,11 @@ const ClinicPage = () => {
               Bhuvaneswar 
             </Link> / { id}
           </p>
-        <GridGallery images = {images}/>
-        <ClinicTitle {...clinicInfo}/>
-        <Specialists/>
-      </div>
-        <Footer/>
+          <GridGallery images = {images}/>
+          <ClinicTitle {...clinicInfo}/>
+          <Specialists/>
+        </div>
+      <Footer/>
     </div>
   );
 }

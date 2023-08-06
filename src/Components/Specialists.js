@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import clinicInfo from '../Components/Data/clinicInfo'
 import {AiOutlineSearch} from 'react-icons/ai'
 import DoctorCard from './DoctorCard';

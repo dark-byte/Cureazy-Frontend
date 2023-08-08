@@ -32,11 +32,34 @@ const SignUp = () => {
 
     }, [])
 
-    const handleGoogleSignUp = async (res) =>{
+    const handleGoogleSignUp = async (res) => {
         console.log(res.credential)
         var user = jwt_decode(res.credential)
-        console.log(user.name)
+        console.log(user.given_name)
+        console.log(user.family_name)
         console.log(user.email)
+
+        axios({
+            method: 'post',
+            url: "http://localhost:5000/signup/google",
+            headers: {},
+            data: {
+                "fName": user.given_name,
+                "lName": user.family_name,
+                "dob": "",
+                "address": "",
+                "pin": "",
+                "email": user.email,
+                "phNumber": "",
+                "password": ""
+            }
+        }).then((res) => {
+            console.log(res)
+            alert("Sign up Successful!")
+        }).catch((err) => {
+            console.log(err)
+            alert(err.response.data.error)
+        })
 
         alert(`Welcome ${user.name}!`)
     }

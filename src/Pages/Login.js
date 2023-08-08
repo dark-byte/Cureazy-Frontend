@@ -28,15 +28,28 @@ const Login = (loggedIn) => {
 
     }, [])
 
-    const handleGoogleSignUp = async (res) =>{
+    const handleGoogleSignUp = async (res) => {
         console.log(res.credential)
         var user = jwt_decode(res.credential)
-        console.log(user.name)
         console.log(user.email)
+
+        axios({
+            method: 'post',
+            url: "http://localhost:5000/login/google",
+            headers: {},
+            data: {
+                "email": user.email
+            }
+        }).then((res) => {
+            console.log(res)
+            alert("Login Successful!")
+        }).catch((err) => {
+            console.log(err)
+            alert(err.response.data.error)
+        })
 
         alert(`Welcome ${user.name}!`)
         loggedIn = true
-        // navigate('/home')
     }
 
 

@@ -5,6 +5,7 @@ import Login from '../Pages/Login';
 import SignUp from '../Pages/SignUp';
 import Home from '../Pages/Home'
 import ClinicPage from '../Pages/ClinicPage';
+import UserProfile from '../Pages/UserProfile';
 import ScrollTop from '../Components/ScrollTop';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Route path='/home' element = {<Home/>}/>
         <Route path='/clinic/:id' element = {<ClinicPage/>}/>
         <Route path='*' element = {<Landing/>}/>
+        <Route path='/profile' element={<UserProfile />}></Route>
       </Routes>
     </BrowserRouter>
     </>

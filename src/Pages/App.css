@@ -29,6 +29,19 @@ h3{
   font-weight: 300;
 }
 
+.pfp-page{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.pfp-img{
+  margin-top: 50px;
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+}
+
 .link{
   color: var(--primary);
   text-decoration: none;

@@ -1013,6 +1013,51 @@ footer {
   margin-bottom: 15px;
 }
 
+/* PROFILE DROPDOWN */
+
+.dropdown {
+  position: relative;
+  display: flex;
+  margin-left: 20px;
+}
+
+.dropdown-btn{
+  font-weight: 400;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  margin-top: 40px;
+  background-color: var(--bg-dark);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown ul{
+  margin: 0;
+  padding: 0;
+}
+
+/* Links inside the dropdown */
+.dropdown-content li {
+  color: black;
+  padding: 10px 15px;
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content li:hover {
+  background-color: var(--bg);
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+  display: block;
+}
 
 @media (max-width: 768px) {
 

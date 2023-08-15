@@ -1,7 +1,10 @@
 import { Link } from 'react-router-dom';
 import { AiOutlineSearch } from 'react-icons/ai'
+import ProfileDropdown from './ProfileDropdown';
+import RegisterBtnGrp from './RegisterBtnGrp';
 
-const Nav = () => {
+const Nav = (loggedIn) => {
+
   return (
      <nav className="navbar navbar-fixed">
         <div className="navbar-logo">
@@ -12,14 +15,7 @@ const Nav = () => {
           <input className='input' placeholder='Search for doctors, clinics or hospitals'/>
         </div>
         <div className="navbar-links">
-            <div className="navbar-button-group">
-              <button className="btn-nav-secondary">
-                <Link className='link' to="/login">Login</Link>
-              </button>
-              <button className="btn-nav-primary">
-                <Link className='link-white' to="/signup">Sign Up</Link>
-              </button>
-            </div>
+            {loggedIn ? <ProfileDropdown/> : <RegisterBtnGrp/>}
         </div>
     </nav>
   );

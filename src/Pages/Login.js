@@ -1,12 +1,11 @@
 import React from 'react';
-// import { FcGoogle } from 'react-icons/fc';
 import { Link, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import axios from 'axios'
 import jwt_decode from 'jwt-decode';
 
 
-const Login = (loggedIn) => {
+const Login = ({loggedIn, setLoggedIn}) => {
     const navigate = useNavigate()
     useEffect(()=>{
     
@@ -50,6 +49,7 @@ const Login = (loggedIn) => {
 
         alert(`Welcome ${user.name}!`)
         loggedIn = true
+        // navigate('/home')
     }
 
 

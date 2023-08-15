@@ -3,19 +3,18 @@ import {RiArrowDropDownLine} from 'react-icons/ri'
 
 const ProfileDropdown = () => {
 
-    const [username, setUsername] = useState("johndoe123")
-    const [dropDownOpen, setDropDownOpen] = useState(false)
-    const handleButtonClick = () => {
-      setDropDownOpen(!dropDownOpen)  
-    };
+  const [username, setUsername] = useState("johndoe123")
+  const [dropDownOpen, setDropDownOpen] = useState(false)
+  const handleButtonClick = () => {
+    setDropDownOpen(!dropDownOpen)
+  };
 
   return (
-    <div className="">
-        <button type="button" class="button" onClick={handleButtonClick}>
-            <RiArrowDropDownLine/>
+    <div className='dropdown'>
+        <button className='dropdown-btn' onClick={handleButtonClick}>
+        {username} <RiArrowDropDownLine/>
         </button>
-        {dropDownOpen && (
-            <div class="dropdown">
+          <div className={dropDownOpen? 'dropdown-content show' : 'dropdown-content'}>
             <ul>
                 <li>Profile</li>
                 <li>Apointments</li>
@@ -23,8 +22,7 @@ const ProfileDropdown = () => {
                 <li>Settings</li>
                 <li>Logout</li>
             </ul>
-        </div>
-        )}
+          </div>
     </div>
   );
 }

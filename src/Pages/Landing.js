@@ -7,10 +7,10 @@ import DownloadApp from "../Components/DownloadApp";
 import Footer from "../Components/Footer";
 import FindDoc from "../Components/FindDoc";
 
-function Landing() {
+function Landing(loggedIn, setLoggedIn) {
   return (
     <div className="App">
-      <Nav/>
+      <Nav loggedIn = {loggedIn} setLoggedIn = {setLoggedIn}/>
       <Hero/>
       <FindDoc/>
       <Services/>

@@ -15,11 +15,11 @@ function App() {
    <BrowserRouter>
       <ScrollTop/>
       <Routes>
-        <Route path = "/" element = {<Landing/>}/>
-        <Route path='/login' element = {<Login/>}/>
+        <Route path = "/" element = {<Landing loggedIn = {loggedIn} setLoggedIn = {setLoggedIn}/>}/>
+        <Route path='/login' element = {<Login loggedIn = {loggedIn} setLoggedIn = {setLoggedIn}/>}/>
         <Route path='/signup' element = {<SignUp/>}/>
-        <Route path='/home' element = {<Home/>}/>
-        <Route path='/clinic/:id' element = {<ClinicPage/>}/>
+        <Route path='/home' element = {<Home loggedIn = {loggedIn} setLoggedIn = {setLoggedIn}/>}/>
+        <Route path='/clinic/:id' element = {<ClinicPage loggedIn = {loggedIn} setLoggedIn = {setLoggedIn}/>}/>
         <Route path='*' element = {<Landing/>}/>
         <Route path='/profile' element={<UserProfile />}></Route>
       </Routes>

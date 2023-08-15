@@ -5,11 +5,11 @@ import Categories from '../Components/Categories';
 import TopCarousel from '../Components/TopCarousel';
 import Footer from '../Components/Footer'
 
-const Home = () => {
+const Home = (loggedIn) => {
 
   return (
     <div className='home'>
-      <NavFixed />
+      <NavFixed loggedIn = {loggedIn}/>
       <TopCarousel/>
       <Categories/>
       <Clinics/>

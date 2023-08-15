@@ -3,11 +3,10 @@ import { Link } from 'react-router-dom';
 import ProfileDropdown from './ProfileDropdown';
 import RegisterBtnGrp from './RegisterBtnGrp';
 
-const Nav = () => {
+const Nav = (loggedIn, setLoggedIn) => {
 
   const [navbar, setNavbar] = useState(true)
   const [sectionDoctor, setSectionDoctor] = useState(false);
-  const [loggedIn, setLoggedIn] = useState(true)
 
   const changeBackground = () => {
     if (window.scrollY >= 60) {

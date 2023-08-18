@@ -49,7 +49,6 @@ const Login = ({loggedIn, setLoggedIn}) => {
 
         alert(`Welcome ${user.name}!`)
         loggedIn = true
-        // navigate('/home')
     }
 
 

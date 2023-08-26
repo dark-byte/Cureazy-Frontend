@@ -1,4 +1,9 @@
 import React from "react";
+import { BiRupee, BiHelpCircle } from "react-icons/bi";
+import { BsGrid, BsCalendar2Date } from "react-icons/bs";
+import {CgProfile} from "react-icons/cg"
+import {CiSettings} from "react-icons/ci"
+
 
 
 const Sidebar = ({
@@ -8,12 +13,30 @@ const Sidebar = ({
   toggleSidebar,
 }) => {
   const tabs = [
-    "Overview",
-    "Appointment",
-    "Doctors",
-    "Payment",
-    "Help & Center",
-    "Setting",
+    {
+      name: "Overview",
+      icon: BsGrid,
+    },
+    {
+      name: "Appointment",
+      icon: BsCalendar2Date,
+    },
+    {
+      name: "Doctors",
+      icon: CgProfile,
+    },
+    {
+      name: "Payment",
+      icon: BiRupee,
+    },
+    {
+      name: "Help & Center",
+      icon: BiHelpCircle,
+    },
+    {
+      name: "Setting",
+      icon: CiSettings,
+    },
   ];
 
   return (
@@ -22,11 +45,11 @@ const Sidebar = ({
       <ul className="tab-list">
         {tabs.map((tab) => (
           <li
-            key={tab}
-            className={tab === activeTab ? "active" : ""}
-            onClick={() => setActiveTab(tab)}
+            key={tab.name}
+            className={tab.name === activeTab ? "active" : ""}
+            onClick={() => setActiveTab(tab.name)}
           >
-            {tab}
+            <tab.icon /> <span>{tab.name}</span>
           </li>
         ))}
       </ul>

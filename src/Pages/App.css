@@ -1093,10 +1093,20 @@ footer {
 }
 
 .tab-list li {
+  display: flex;
+  align-items: center;
   padding: 15px 20px;
   font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s;
+}
+
+.tab-list li span{
+  margin-left: 10px;
+}
+
+.tab-list li svg{
+  font-size: 1.2 rem;
 }
 
 .tab-list li:hover {

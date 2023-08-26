@@ -3,7 +3,7 @@ import {RiArrowDropDownLine} from 'react-icons/ri'
 
 const ProfileDropdown = () => {
 
-  const [username, setUsername] = useState("johndoe123")
+  const [username] = useState("johndoe123")
   const [dropDownOpen, setDropDownOpen] = useState(false)
   const handleButtonClick = () => {
     setDropDownOpen(!dropDownOpen)

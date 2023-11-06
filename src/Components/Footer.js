@@ -5,7 +5,7 @@ const Footer = () => {
     <footer>
       <div className="footer-column footer-column-logo">
         <h1>CUREAZZY</h1>
-        <p>2023 © Medic ™ Ltd. All rights reserved.</p>
+        <p>© Cureazzy Ltd. 2023 <br /> All rights reserved.</p>
       </div>
       <div className="footer-column">
         <h3>About Us</h3>

@@ -27,7 +27,7 @@ const ClinicPage = () => {
             </Link> / { id}
           </p>
           <GridGallery images = {images}/>
-          <ClinicTitle {...clinicInfo}/>
+          <ClinicTitle {...clinicInfo} id = {id}/>
           <Specialists/>
         </div>
       <Footer/>

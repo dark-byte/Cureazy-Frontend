@@ -1185,3 +1185,57 @@ footer {
   margin-left: 0;
 }
 }
+
+.doc-card{
+  max-height: 150px;
+}
+
+.doc-card-mid{
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  height: 100%;
+  margin-left: 1rem;
+}
+
+.doc-card-mid h4{
+  margin: 1rem 0;
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.doc-card-right{
+  margin-right: 1rem;
+  padding-bottom: 0;
+}
+
+.doc-card-container{
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+  max-height: 90vh;
+}
+
+
+.doc-card-img{
+  width: 100%;
+}
+
+.booking-doctor{
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.booking-doctor-top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.add-doc-btn{
+  max-height: 70px;
+  font-size: 1rem;
+  margin-right: 3rem;
+  margin-bottom: 0;
+}

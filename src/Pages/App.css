@@ -97,6 +97,13 @@ padding-left: 45px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
+.input-small{
+  padding: 10px 20px;
+  padding-left: 20px;
+  min-width: 250px;
+  border-radius: 7px;
+}
+
 .fixed-top{
   position: fixed;
   top: 0px;
@@ -1238,4 +1245,102 @@ footer {
   font-size: 1rem;
   margin-right: 3rem;
   margin-bottom: 0;
+}
+
+
+/* Popup.css */
+
+.add-doc-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Black tint background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-modal-main {
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.popup-modal-main button {
+  margin-top: 10px;
+}
+
+.popup-modal-main h3{
+  font-weight: 800;
+  font-size: 2rem;
+  margin-bottom: 4rem;
+}
+
+
+.close-btn{
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 1.5rem;
+}
+
+.popup-modal-main input{
+  margin-left: 0;
+  margin-bottom: 2.5rem;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 4px 12px;
+}
+
+.popup-modal-main label{
+  position: relative;
+  font-size: 14px;
+}
+
+.popup-label{
+  position: absolute;
+  top: -2.5rem;
+  left: 2px;
+}
+
+.popup-modal-main form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 2rem;
+}
+
+.doc-submitted{
+  background-color: var(--bg);
+  padding: 2rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.doc-submitted-success{
+  font-size: 3rem;
+  border-radius: 50%;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+}
+
+.add-doc-display-flex{
+  display: flex;
+}
+
+.add-doc-display-none{
+  display: none;
+  visibility: none;
 }

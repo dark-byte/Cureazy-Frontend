@@ -1,14 +1,14 @@
 import React from "react";
 import Sidebar from "../Components/Sidebar";
-import Overview from "../Components/Booking.Overview"
-import Appointment from "../Components/Booking.Appointment"
-import Doctors from "../Components/Booking.Doctors"
-import Payments from "../Components/Booking.Payments"
-import Help from "../Components/Booking.Help"
-import Setting from "..//Components/Booking.Setting"
+import Overview from "../Components/Clinic.Overview"
+import Appointment from "../Components/Clinic.Appointment"
+import Doctors from "../Components/Clinic.Doctors"
+import Payments from "../Components/Clinic.Payments"
+import Help from "../Components/Clinic.Help"
+import Setting from "..//Components/Clinic.Setting"
 import { useState } from "react";
 
-const Booking = () => {
+const ClinicDashboard = () => {
   const [activeTab, setActiveTab] = useState("Overview");
   const [sidebarVisible, setSidebarVisible] = useState(true);
 
@@ -51,4 +51,4 @@ const Booking = () => {
   );
 };
 
-export default Booking;
+export default ClinicDashboard;

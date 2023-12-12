@@ -585,13 +585,14 @@ footer {
   background: url('/src/images/bg-pattern2.png');
   background-position: center;
   background-size: cover;
+  overflow: hidden;
 }
 
 .register-bg{
   background-color: var(--bg-dark);
   display: flex;
   height: 90%;
-  /* width: 90% ; */
+  overflow: hidden;
   border-radius: 20px;
   justify-content: center;
   box-shadow: rgba(100, 100, 111, 0.293) 0px 30px 50px 20px;
@@ -607,13 +608,12 @@ footer {
 }
 
 .register-right{
-  padding: 0 20px;
+  padding: 0 50px;
 }
 
 .register-container img{
-  height: 85%;
-  margin-right: 70px;
-  margin-left: 15%;
+  height: 100%;
+  /* margin-right: 70px; */
 }
 
 .register-container h2{
@@ -640,7 +640,7 @@ footer {
 }
 
 .register-form{
-  margin: 0 10%;
+  /* margin: 0 10%; */
   margin-left: 0;
 }
 
@@ -689,12 +689,51 @@ footer {
   border-radius: 10px;
   border: 2px solid #bdbdbd;
   min-width: 300px;
+  width: 88%;
+}
+
+.register-form label{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.register-form label input{
+  width: unset;
 }
 
 .register-form input[type="checkbox"]{
   min-width: 0;
   margin-right: 10px;
   cursor: pointer;
+}
+
+.password-input-container{
+  position: relative;
+}
+
+.password-input {
+  padding: 8px;
+  margin-bottom: 10px;
+  width: 250px;
+}
+
+.password-toggle-button {
+  position: absolute;
+  top: 20%;
+  right: 10px;
+  /* transform: translateY(100%); */
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  font-size: 18px;
+  color: #bdbdbd;
+  transition: all ease 0.2s;
+}
+
+.password-toggle-button:hover {
+  color: #808080;
 }
 
 /* CLINIC CARD */

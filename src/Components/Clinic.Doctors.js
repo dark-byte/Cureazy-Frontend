@@ -1,8 +1,8 @@
 import React from 'react';
-import DocCard from './Booking.Doctors.card';
+import DocCard from './Clinic.Doctors.card';
 import docs from './Data/doctors'
 import { IoMdAdd } from "react-icons/io";
-import AddDocPopup from './Booking.AddDoc';
+import AddDocPopup from './Clinic.AddDoc';
 import { useState } from 'react';
 
 const Doctors = () => {

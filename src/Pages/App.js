@@ -7,7 +7,9 @@ import Home from '../Pages/Home'
 import ClinicPage from '../Pages/ClinicPage';
 import UserProfile from '../Pages/UserProfile';
 import ScrollTop from '../Components/ScrollTop';
-import Booking from './Booking';
+import ClinicDashboard from './ClinicDashboard';
+import ClinicLogin from './Clinic.Login';
+import ClinicSignUp from './Clinic.SignUp';
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(true)
@@ -22,7 +24,9 @@ function App() {
         <Route path='/home' element = {<Home loggedIn = {loggedIn} setLoggedIn = {setLoggedIn}/>}/>
         <Route path='/clinic/:id' element = {<ClinicPage loggedIn = {loggedIn} setLoggedIn = {setLoggedIn}/>}/>
         <Route path='/profile' element={<UserProfile />}/>
-        <Route path='/booking/' element={<Booking/>}/>
+        <Route path='/clinic-dashboard/' element={<ClinicDashboard/>}/>
+        <Route path='/clinic/login' element={<ClinicLogin/>}/>
+        <Route path='/clinic/signup' element={<ClinicSignUp/>}/>
         <Route path='*' element = {<Landing/>}/>
       </Routes>
     </BrowserRouter>

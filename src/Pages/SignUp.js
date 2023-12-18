@@ -41,7 +41,7 @@ const SignUp = () => {
 
         axios({
             method: 'post',
-            url: "http://localhost:5000/signup/google",
+            url: process.env.POST_URL+'signup/google',
             headers: {},
             data: {
                 "fName": user.given_name,

@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios'
-import { Link } from 'react-router-dom';
-import jwt_decode from 'jwt-decode';
+import { Link, useNavigate } from 'react-router-dom';
+import { IoWarningOutline } from "react-icons/io5";
+
 
 var validator = require("email-validator");
-const bcrypt = require('bcryptjs');
+const bcrypt = require('bcryptjs');  
+
 
 const ClinicSignUp = () => {
     const [name, setName] = useState('');
@@ -12,6 +13,8 @@ const ClinicSignUp = () => {
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const [agreedToTerms, setAgreedToTerms] = useState(false);
+
+    const navigate = useNavigate();
 
     useEffect(()=>{
         
@@ -65,9 +68,18 @@ const ClinicSignUp = () => {
         // alert(`Welcome ${user.name}!`)
     }
 
+    const [errorMessageVisible, setErrorMessageVisible] = useState(false);
+
     const handleSignUp = async (e) => {
-        console.log("TODO-Handle SignUP")
-        // e.preventDefault()
+        e.preventDefault()
+
+        if (!agreedToTerms) {
+            setErrorMessageVisible(true);
+        } else {
+            console.log("Welcome to Cureazzy!")
+            navigate('/clinic/add-details');
+        }
+
 
         // var ph = ""
         // var mail = email
@@ -172,7 +184,12 @@ const ClinicSignUp = () => {
                             />
                             I agree to all Terms and Privacy Policy
                         </label>
-                        <button className='register-form-btn register-submit' disabled={!agreedToTerms} onClick={handleSignUp}>
+                        {errorMessageVisible && (
+                            <div style={{ color: 'red', marginBottom: '1rem' }}>
+                                <IoWarningOutline/> Please agree to terms and privacy policy to continue!
+                            </div>
+                        )}
+                        <button className='register-form-btn register-submit' onClick={handleSignUp}>
                             Sign up
                         </button>
                         <p>

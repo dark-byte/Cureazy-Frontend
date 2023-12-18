@@ -10,6 +10,8 @@ import ScrollTop from '../Components/ScrollTop';
 import ClinicDashboard from './ClinicDashboard';
 import ClinicLogin from './Clinic.Login';
 import ClinicSignUp from './Clinic.SignUp';
+import AddClinicDetails from './Clinic.AddDetails';
+require('dotenv').config()
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(true)
@@ -27,6 +29,7 @@ function App() {
         <Route path='/clinic-dashboard/' element={<ClinicDashboard/>}/>
         <Route path='/clinic/login' element={<ClinicLogin/>}/>
         <Route path='/clinic/signup' element={<ClinicSignUp/>}/>
+        <Route path='/clinic/add-details' element={<AddClinicDetails/>}/>
         <Route path='*' element = {<Landing/>}/>
       </Routes>
     </BrowserRouter>
